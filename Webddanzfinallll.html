@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danzz Official</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+      background: black;
+      color: white;
+    }
+    video.background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .container {
+      text-align: center;
+      padding: 2rem;
+      animation: fadeIn 1s ease;
+    }
+    img.logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+    .tab-buttons button {
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer;
+    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; animation: fadeIn 0.5s ease; }
+    .btn {
+      background: white;
+      color: black;
+      margin: 1rem auto;
+      display: block;
+      padding: 0.75rem;
+      width: 90%;
+      border-radius: 1rem;
+      font-size: 1rem;
+    }
+    .btn i { margin-right: 8px; }
+    .catalog {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .catalog-item {
+      background: rgba(255,255,255,0.1);
+      padding: 1rem;
+      border-radius: 1rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .catalog-item img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+    .catalog-item:hover {
+      transform: scale(1.05);
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: white;
+      color: black;
+      max-width: 90%;
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+    }
+    .slider-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 10px;
+    }
+    .slider-container img {
+      scroll-snap-align: center;
+      width: 100%;
+      max-width: 300px;
+      border-radius: 1rem;
+    }
+    .modal button {
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 1rem;
+      background: #333;
+      color: white;
+      cursor: pointer;
+    }
+    a, a:focus, a:active, a:visited, a:focus-visible {
+      text-decoration: none !important;
+      outline: none !important;
+      color: inherit !important;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<video class="background-video" autoplay muted loop>
+  <source src="https://files.catbox.moe/oxmyen.mp4" type="video/mp4">
+</video>
+<audio autoplay loop>
+  <source src="https://files.catbox.moe/xy55bd.mp3" type="audio/mp3">
+</audio>
+  <div class="container">
+    <img src="https://files.catbox.moe/hmwldu.jpg" alt="Logo Danzz" class="logo">
+    <h1><strong>Danzz Official</strong></h1>
+    <p>Jasa Jual beli akun dan Hoasting Terpercaya</p>
+    <div class="tab-buttons">
+      <button onclick="showTab('links')">Links</button>
+      <button onclick="showTab('shop')">Shop</button>
+    </div>
+
+    <div id="links" class="tab-content active">
+      <a href="https://wa.me/6288221170125" target="_blank"><button class="btn"><i class="fab fa-whatsapp"></i> WhatsApp Admin 1</button></a>
+      <a href="https://wa.me/6285147035646" target="_blank"><button class="btn"><i class="fab fa-whatsapp"></i> WhatsApp Admin 2</button></a>
+      <a href="https://wa.me/6285876108953" target="_blank"><button class="btn"><i class="fab fa-whatsapp"></i> WhatsApp Admin 3</button></a>
+      <a href="https://www.instagram.com/danzz_offcl?igsh=OTVxMzJvMTZjYTNp" target="_blank"><button class="btn"><i class="fab fa-instagram"></i> Instagram</button></a>
+      <a href="https://www.tiktok.com/@danzz_offclll?_t=ZS-8wMdZ678feD&_r=1" target="_blank"><button class="btn"><i class="fab fa-tiktok"></i> TikTok</button></a>
+      <a href="https://discord.gg/ndxyrMMw" target="_blank"><button class="btn"><i class="fab fa-discord"></i> Discord</button></a>
+      <a href="t.me/DANZZjebehhreal" target="_blank"><button class="btn"><i class="fab fa-telegram"></i> Telegram</button></a>
+      <a href="https://whatsapp.com/channel/0029Vb5fvQ81yT1zvD820j0i" target="_blank"><button class="btn"><i class="fab fa-whatsapp"></i> Link tesmoni Transaksi</button></a>
+      <a href="https://chat.whatsapp.com/LR4kJfUZDRrKcjQPpMB9jT" target="_blank"><button class="btn"><i class="fab fa-whatsapp"></i> Link Grub Danzz Officiall</button></a>
+    </div>
+    <div id="shop" class="tab-content">
+      <div class="catalog">
+        <div class="catalog-item" onclick="openModal('Scrip Bot v1', '150.000', ['https://files.catbox.moe/kldgir.jpg'], 'Halo saya mau Melihat list scrip bot WhatsApp')">
+          <img src="https://files.catbox.moe/jrszbu.png"><p>Scrip Bot WhatsApp</p>
+          <p>Rp: 10.000-40.000</p>
+        </div>
+        <div class="catalog-item" onclick="openModal('Scrip Bot v2', '000.000', ['https://files.catbox.moe/rv7o2s.jpg','https://files.catbox.moe/0wje4w.jpg'], 'Halo saya mau beli Scrip Bot v2')">
+          <img src="https://files.catbox.moe/ly0h72.png"><p>Jasa Rename akar (no enc)</p>
+          <p>Rp: 15.000-25.000</p>
+        </div>
+        <div class="catalog-item" onclick="openModal('Scrip Bot v2', '000.000', ['https://files.catbox.moe/vyguo1.jpg','https://files.catbox.moe/upq0r1.png'], 'Halo saya Tertarik Denggan Resseler panel?')">
+          <img src="https://files.catbox.moe/4cwb6h.png"><p>Tim Resseler Panel Ptrocodly</p>
+          <p>Rp: 7.000-25.000</p>
+        </div>
+        <div class="catalog-item" onclick="openModal('Scrip Bot v2', '000.000', ['https://files.catbox.moe/vhfax2.jpg','https://files.catbox.moe/vpdysc.jpg'], 'Halo saya mau jasa buat web simple')">
+          <img src="https://files.catbox.moe/xhpu95.png"><p>Jasa Buat web Simple</p>
+          <p>Rp: 5.000-15.000</p>
+        </div>
+          <div class="catalog-item" onclick="openModal('Scrip Bot v2', '000.000', ['https://files.catbox.moe/35ga63.png'], 'Halo saya mau Sewakan nomeer WhatsApp Saya')">
+          <img src="https://files.catbox.moe/ijjc79.png"><p>Blast WhatsApp (sewain WhatsApp)</p>
+        </div>
+        <div class="catalog-item" onclick="openModal('Scrip Bot v1', '000.000', ['https://files.catbox.moe/sevdlb.jpg','https://files.catbox.moe/r5o2tk.jpg','https://files.catbox.moe/4df1qd.jpg','https://files.catbox.moe/slqobr.jpg'], 'Halo Saya ingin Memesan Jasa suntik Sosmed')">
+          <img src="https://files.catbox.moe/n86pkv.png"><p>Jasa Suntik All Sosmed</p>
+          <p>Rp: 5.000-500.000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal" class="modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="slider-container" id="slider"></div>
+      <button id="buyBtn">Beli Sekarang</button>
+      <button onclick="closeModal()">Kembali</button>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    function openModal(product, price, images, message) {
+      const slider = document.getElementById('slider');
+      slider.innerHTML = images.map(src => `<img src="${src}" />`).join('');
+      const encodedMsg = encodeURIComponent(message || `Halo saya ingin memesan ${product} seharga Rp ${price}`);
+      document.getElementById('buyBtn').onclick = () => {
+        window.location.href = `https://wa.me/6288221170125?text=${encodedMsg}`;
+      };
+      document.getElementById('modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
